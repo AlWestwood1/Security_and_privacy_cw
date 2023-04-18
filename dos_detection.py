@@ -12,7 +12,7 @@ pkt_timestamps = deque()
 blocked_ips = set()
 flagged_ips = set()
 
-logs = open("dos_detection.log", 'a')
+logs = open("detection_logs.log", 'a')
 
 def packet_handling(pkt):
     if IP in pkt:
