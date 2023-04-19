@@ -15,4 +15,4 @@ def deauth_detection(pkt):
 if __name__ == '__main__':
     interface = "wlan0"
     print("Monitoring traffic...")
-    sniff(filter="ip", prn=deauth_detection, iface=interface)
+    sniff(prn=deauth_detection, iface=interface)
