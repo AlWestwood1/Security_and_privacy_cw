@@ -50,7 +50,11 @@ def port_scan_detection(pkt):
             connections[src] = [dport]
             pkt_timestamps[src] = [time.time()]
 
-if __name__ == '__main__':
-    interface = "wlan0"
+def main():
+    interface = input("Please enter the interface you would like to use: ")
     print("Monitoring traffic...")
     sniff(filter="tcp", prn=port_scan_detection, iface=interface)
+
+if __name__ == '__main__':
+    main()
+    

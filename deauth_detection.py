@@ -12,7 +12,12 @@ def deauth_detection(pkt):
         logs.write(msg)
         print(msg)
 
-if __name__ == '__main__':
-    interface = "wlan0"
+
+def main():
+    interface = input("Please enter the interface you would like to use: ")
     print("Monitoring traffic...")
     sniff(prn=deauth_detection, iface=interface)
+
+if __name__ == '__main__':
+    main()
+    

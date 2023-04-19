@@ -51,9 +51,12 @@ def packet_handling(pkt):
                     print("Invalid input, please try again.\n")
 
 
+def main():
+    interface = input("Please enter the interface you would like to use: ")
+    print("Monitoring traffic...")
+    sniff(filter="ip", prn=packet_handling, iface=interface)
 
-interface = "wlan0"
-print("Monitoring traffic...")
-sniff(filter="ip", prn=packet_handling, iface=interface)
+if __name__ == '__main__':
+    main()
     
 
